@@ -20,7 +20,7 @@ app.get('/',function(req,res){
 	res.json(data);
 });
 
-app.get('/books',function(req,res){
+app.get('/book',function(req,res){
 	var data = {
 		"error":1,
 		"Books":""
@@ -38,7 +38,7 @@ app.get('/books',function(req,res){
 	});
 });
 
-app.post('/addbook',function(req,res){
+app.post('/book',function(req,res){
 	var Bookname = req.body.bookname;
 	var Authorname = req.body.authorname;
 	var Price = req.body.price;
@@ -62,7 +62,7 @@ app.post('/addbook',function(req,res){
 	}
 });
 
-app.post('/updatebook',function(req,res){
+app.put('/book',function(req,res){
 	var Id = req.body.id;
 	var Bookname = req.body.bookname;
 	var Authorname = req.body.authorname;
@@ -87,7 +87,7 @@ app.post('/updatebook',function(req,res){
 	}
 });
 
-app.post('/deletebook',function(req,res){
+app.delete('/book',function(req,res){
 	var Id = req.body.id;
 	var data = {
 		"error":1,
